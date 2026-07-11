@@ -70,7 +70,10 @@ ZSH_THEME="" #"robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -135,3 +138,9 @@ bindkey -v
 
 # make it so zoxide is enabled
 eval "$(zoxide init zsh --cmd cd)"
+
+# make it so the full path is displayed
+PROMPT='%d %% '
+
+# enable starship
+eval "$(starship init zsh)"
