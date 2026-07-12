@@ -37,10 +37,9 @@
           btop
           genact
           cmatrix
-          trash
+          darwin.trash
           ffmpeg
           fastfetch
-          anki
           # google-chrome
         ];
       };
