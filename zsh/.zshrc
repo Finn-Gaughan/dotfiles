@@ -110,6 +110,7 @@ alias tm="task priority:M list project: limit:page" # "th" is short for "Task Hi
 alias h="harsh"
 alias p3="python3"
 alias findrive='fd . ~/Library/CloudStorage/GoogleDrive* -t f | fzf --delimiter / --with-nth -1 --preview "echo {}" --preview-window=bottom:3:wrap | xargs -I {} open -a Preview "{}"'
+alias cat="bat" # because bat is a batter upgraded version of cat
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
