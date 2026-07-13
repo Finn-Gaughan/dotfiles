@@ -40,6 +40,8 @@
           darwin.trash
           ffmpeg
           fastfetch
+          oh-my-zsh
+          bat
           # google-chrome
         ];
       };
