@@ -22,9 +22,8 @@
 #  Once the changes are committed to your  main  branch, upgrade your profile. Use the  --refresh  flag to force Nix to bypass its
 #  local cache and look at your new commit:
 
-#    nix profile upgrade 0 --refresh
+#    nix profile upgrade . --all --refresh
 
-#  (Or run  nix profile upgrade --all --refresh  to upgrade all profile packages.)
 #AI SLOP:
 {
   description = "Standalone Nix Profile Dotfiles Environment";
