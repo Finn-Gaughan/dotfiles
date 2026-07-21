@@ -61,6 +61,7 @@
           oh-my-zsh
           bat
           yazi
+          tldr
           # google-chrome
         ];
       };
