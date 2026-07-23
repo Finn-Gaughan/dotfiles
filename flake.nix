@@ -22,7 +22,7 @@
 #  Once the changes are committed to your  main  branch, upgrade your profile. Use the  --refresh  flag to force Nix to bypass its
 #  local cache and look at your new commit:
 
-#    nix profile upgrade . --all --refresh
+#    nix profile upgrade . --refresh
 
 #AI SLOP:
 {
@@ -62,6 +62,7 @@
           bat
           yazi
           tldr
+          openvpn
           # google-chrome
         ];
       };
