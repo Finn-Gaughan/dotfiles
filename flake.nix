@@ -63,6 +63,7 @@
           yazi
           tldr
           openvpn
+          kanata
           # google-chrome
         ];
       };
