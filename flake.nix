@@ -41,7 +41,6 @@
         name = "my-profile-packages";
         paths = with pkgs; [
           # Add all the CLI tools and apps you want installed here
-          neovim
           tmux
           alacritty
           git
