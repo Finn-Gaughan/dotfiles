@@ -8,14 +8,25 @@ set -e
 # List of packages, add them here.
 PACKAGES=(
   zsh
+  fish
   tmux
   neovim
-  git
   gh
   alacritty
-  #sway
+  fzf
+  stow
+  starship
+  zoxide
+  uv
+  btop
+  genact
+  cmatrix
+  fastfetch
+  bat
+  yazi
+  tldr
+  openvpn
   #google-chrome maybe use flatpack for?
-  #yazi
 )
 
 # install all packages

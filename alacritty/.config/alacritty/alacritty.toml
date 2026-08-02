@@ -5,3 +5,8 @@ padding = {x = 20, y = 20}
 
 [font]
 size = 18
+
+#[terminal.shell]
+#program = "/Users/finngaughan/.nix-profile/bin/tmux" # this will need to change depending on OS
+#args = ["new-session", "-A", "-s", "main"]
+

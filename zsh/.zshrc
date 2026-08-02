@@ -127,6 +127,8 @@ mark() {
 
 # Add an environment variable so that hledger can easily find my current journal.
 export LEDGER_FILE="~/Documents/hledger/2025-2026.journal"
+# make it so SSH goes to bitwarden (from the app store) to find authentication keys
+export SSH_AUTH_SOCK="$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
 
 # Save timestamps to the zsh history file natively
 setopt EXTENDED_HISTORY
@@ -145,3 +147,6 @@ PROMPT='%d %% '
 
 # enable starship
 eval "$(starship init zsh)"
+
+# call my starting commands
+#fastfetch
