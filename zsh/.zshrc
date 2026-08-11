@@ -150,3 +150,7 @@ eval "$(starship init zsh)"
 
 # call my starting commands
 #fastfetch
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/finngaughan/.local/bin:$PATH"
