@@ -127,8 +127,14 @@ mark() {
 
 # Add an environment variable so that hledger can easily find my current journal.
 export LEDGER_FILE="~/Documents/hledger/2025-2026.journal"
-# make it so SSH goes to bitwarden (from the app store) to find authentication keys
-export SSH_AUTH_SOCK="$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+# Bitwarden SSH Agent (Cross-platform Linux & macOS)
+if [[ -S "$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock" ]]; then
+    export SSH_AUTH_SOCK="$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
+elif [[ -S "$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock" ]]; then
+    export SSH_AUTH_SOCK="$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+elif [[ -S "$HOME/Library/Group Containers/24322K3528.com.bitwarden.desktop/t/bitwarden-ssh-agent.sock" ]]; then
+    export SSH_AUTH_SOCK="$HOME/Library/Group Containers/24322K3528.com.bitwarden.desktop/t/bitwarden-ssh-agent.sock"
+fi
 
 # Save timestamps to the zsh history file natively
 setopt EXTENDED_HISTORY

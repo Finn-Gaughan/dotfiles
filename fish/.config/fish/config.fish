@@ -1,6 +1,10 @@
-# Bitwarden SSH Agent (Flatpak)
+# Bitwarden SSH Agent (Cross-platform Linux & macOS)
 if test -S "$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
     set -gx SSH_AUTH_SOCK "$HOME/.var/app/com.bitwarden.desktop/data/.bitwarden-ssh-agent.sock"
+else if test -S "$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+    set -gx SSH_AUTH_SOCK "$HOME/Library/Containers/com.bitwarden.desktop/Data/.bitwarden-ssh-agent.sock"
+else if test -S "$HOME/Library/Group Containers/24322K3528.com.bitwarden.desktop/t/bitwarden-ssh-agent.sock"
+    set -gx SSH_AUTH_SOCK "$HOME/Library/Group Containers/24322K3528.com.bitwarden.desktop/t/bitwarden-ssh-agent.sock"
 end
 
 if status is-interactive
@@ -12,10 +16,6 @@ zoxide init fish --cmd cd | source
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
 
-if status is-interactive
-    and not set -q TMUX
-    exec tmux
-end
 
 
 # Added by Antigravity CLI installer
