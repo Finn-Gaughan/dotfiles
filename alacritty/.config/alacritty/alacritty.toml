@@ -1,7 +1,6 @@
 [window]
 startup_mode = "Maximized"
 decorations = "None"
-padding = {x = 20, y = 20}
 
 [font]
 size = 18
@@ -10,9 +9,9 @@ size = 18
 family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
-#[terminal.shell]
-#program = "/Users/finngaughan/.nix-profile/bin/tmux" # this will need to change depending on OS
-#args = ["new-session", "-A", "-s", "main"]
+[terminal.shell]
+program = "/Users/finngaughan/.nix-profile/bin/tmux" # this will need to change depending on OS
+args = ["new-session", "-A", "-s", "main"]
 
 [colors.primary]
 background = '#282828'
