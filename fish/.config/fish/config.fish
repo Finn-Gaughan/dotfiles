@@ -11,12 +11,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-starship init fish | source
 zoxide init fish --cmd cd | source
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)"
-
-
+#eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv fish)" # what was this even for?
 
 # Added by Antigravity CLI installer
 set -gx PATH "/home/finngaughan/.local/bin" $PATH
