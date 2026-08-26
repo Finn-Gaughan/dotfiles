@@ -7,18 +7,26 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+
+
   "terminal": {
     "shell": {
       "program": "/bin/zsh"
     }
   },
   "agent": {
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "gpt-5.4",
+      "enable_thinking": true,
+      "effort": "high"
+    },
     "favorite_models": [],
     "default_profile": "write",
     "model_parameters": []
   },
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "eager"
   },
   "disable_ai": false,
   "session": {

@@ -1,1 +1,7 @@
 font-size = 18
+theme = Gruvbox Dark Hard
+term = xterm-256color
+window-decoration = false
+gtk-titlebar = false
+macos-titlebar-style = hidden
+auto-update = off

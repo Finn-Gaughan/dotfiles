@@ -142,6 +142,9 @@ setopt EXTENDED_HISTORY
 
 # Force the 'history' command to display them in YYYY-MM-DD format
 alias history="history -i"
+# for csse2310
+alias pull="rsync -avzPvh --include='*/' --include='*.c' --include='*.h' --include='Makefile' --exclude='*' moss:~/a1 ~/"
+alias push="rsync -avzPvh --include='*/' --include='*.c' --include='*.h' --include='Makefile' --exclude='*' ~/a1/ moss:~/a1"
 
 # turn on vim keybindings by default
 bindkey -v
@@ -152,12 +155,9 @@ eval "$(zoxide init zsh --cmd cd)"
 # make it so the full path is displayed
 PROMPT='%d %% '
 
-# enable starship
-eval "$(starship init zsh)"
-
 # call my starting commands
 #fastfetch
 
 
 # Added by Antigravity CLI installer
-export PATH="/home/finngaughan/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
