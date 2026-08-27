@@ -1,19 +1,10 @@
 [user]
-  email = 107291215+Finn-Gaughan@users.noreply.github.com
-  name = Finn Gaughan
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPpKiBmRMWrAlHJHipQDfixhtsV4RkjXMAYnVON99kIA
-[pull]
-	rebase = false
-[gpg]
-	format = ssh
-[gpg "ssh"]
-	allowedSignersFile = /home/finngaughan/.ssh/allowed_signers
-[commit]
-	gpgsign = true
-[tag]
-  gpgsign = true
+	name = Finn Gaughan
+	email = 107291215+Finn-Gaughan@users.noreply.github.com
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
 [init]
-  defaultBranch = main
-
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+	defaultBranch = main
